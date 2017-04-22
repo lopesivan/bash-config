@@ -1,0 +1,100 @@
+lynx -dump  -listonly  192.168.0.15:8000| awk '{print $2}'
+lynx -dump  -listonly  192.168.0.15:8000| awk '{print "wget " $2}'
+lynx -dump  -listonly  192.168.0.15:8000| awk '{print "wget " $2}' > a
+ps aux| awk '/kodi.bin$/ {print $1}'
+sudo cpulimit -p $(ps aux| awk '/kodi.bin$/ {print $2}') -l 10
+ps aux| awk '/kodi.bin$/ {print $1}'
+sudo cpulimit -p $(ps aux| awk '/kodi.bin$/ {print $2}') -l 10
+URL=http://www.infoq.com/br/presentations/produtividade-e-qualidade-em-python?utm_source=infoq&utm_medium=videos_homepage&utm_campaign=videos_row3;curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print $2}'
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print $2}'
+\curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print $2}'
+URL=http://www.infoq.com/br/presentations/produtividade-e-qualidade-em-python?utm_source=infoq&utm_medium=videos_homepage&utm_campaign=videos_row3;curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print $2}'
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print $2}'
+\curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print $2}'
+ls -l --time-style="long-iso" . | grep '^d' | awk '{print $8}'
+ls -l --time-style="long-iso" . | egrep 'hp50$' | awk '{print $8}'
+ls -l |grep '^d' | awk '{print $8}'
+ls -l --time-style="long-iso" . | egrep '^d' | awk '{print $8}'
+ls -l --time-style="long-iso" . | egrep '^d' | awk '{print "cp " $8}'
+ls -l --time-style="long-iso" . | egrep '^d' | awk '{print "cp mount.sh Makefile " $8}'
+ls -l --time-style="long-iso" . | egrep '^d' | awk '{print "cp mount.sh Makefile " $8}'| sh
+ls -l --time-style="long-iso" . | egrep '^d' | awk '{print $8}'
+ls -l --time-style="long-iso" . | egrep '^d' | awk '{print $8}' >> cst.hp50 
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print $2}'
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print "wget  "$2}'
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print $2}'
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print $2}'
+tdl ls | grep awk 
+history | grep awk 
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ '
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print $1}'
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print $0}'
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print $2}'
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.h$/ {print $2}'
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print "wget "$2}'
+tdl add "lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print \"wget \"$2}'|  parallel -j2 echo wget \"{}\" 
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print "wget "$2}'|  parallel -j2 wget "{}"
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print "wget "$2}'|  parallel -j2 echo wget "{}"
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print "wget "$2}'|  parallel -j2 echo wget "{}" > a
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print "wget "$2}' > a
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print "wget "$2}' 
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print "wget "$2}' > a
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print "wget "$2}' | sort 
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print "wget "$2}' | sort | uniq 
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print "wget "$2}' | sort | uniq |  parallel -j2 echo wget "{}"
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print "wget "$2}' | sort | uniq |  parallel -j2  wget "{}"
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print "wget "$2}' | sort | uniq |  parallel -j2  wget -A.ipynb "{}"
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print ""$2}' | sort | uniq |  parallel -j2  wget -A.ipynb "{}"
+echo lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print \"\"$2}' | sort | uniq |  parallel -j2  wget -A.ipynb \"{}\" > DOWNLOAD
+echo "lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print \"\"$2}' | sort | uniq |  parallel -j2  wget -A.ipynb \"{}\" "> DOWNLOAD
+ps -fu julio | head -2 | tail -1 | awk '{ print $2 }'
+ps -fu ivan | head -2 | tail -1 | awk '{ print $2 }'
+ps -fu ivan | head -2 | tail -1 | awk '{ print $2 }'
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print $2}'
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print "wget" $2}'
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print "wget " $2}'
+ps -fu julio | head -2 | tail -1 | awk '{ print $2 }'
+ps -fu ivan | head -2 | tail -1 | awk '{ print $2 }'
+ps -fu ivan | head -2 | tail -1 | awk '{ print $2 }'
+ps -fu julio | head -2 | tail -1 | awk '{ print $2 }'
+ps -fu ivan | head -2 | tail -1 | awk '{ print $2 }'
+ps -fu ivan | head -2 | tail -1 | awk '{ print $2 }'
+mv awkprogs/ /workspace/code/
+mv awkprogs/ /workspace/code/
+mv awkprogs/ /workspace/code/
+mv awkprogs/ /workspace/code/
+grep lopes /tmp/a | awk '{print $1}'
+grep lopes /tmp/a | awk '{print "git clone  "$1}'
+grep lopes /tmp/a | awk '{print "git clone  https://github.com"$1}'
+grep lopes /tmp/a | awk '{print "git clone  https://github.com/"$1}'
+grep lopes /tmp/a | awk '{print "git clone  https://github.com/"$1}' > clone 
+grep lopes /tmp/a | awk '{print $1}'
+grep lopes /tmp/a | awk '{print "git clone  "$1}'
+grep lopes /tmp/a | awk '{print "git clone  https://github.com"$1}'
+grep lopes /tmp/a | awk '{print "git clone  https://github.com/"$1}'
+grep lopes /tmp/a | awk '{print "git clone  https://github.com/"$1}' > clone 
+mv awkprogs/ /workspace/code/
+mv awkprogs/ /workspace/code/
+echo "lynx -dump  -listonly  $URL| awk '/.*\.ipynb$/ {print \"\"$2}' 
+lynx -dump  -listonly  $URL| awk '/.*\.ipynb$/ {print \"\"$2}' 
+lynx -dump  -listonly  $URL| awk '/.*\.ipynb$/ {print " "$2}' 
+lynx -dump  -listonly  $URL| awk '/.*\.pdf$/ {print " "$2}' 
+lynx -dump  -listonly  $URL| awk '{print " "$2}' 
+lynx -dump  -listonly  $URL| awk '{print " "$2-}' 
+lynx -dump  -listonly  $URL| awk '{print " "$)}' 
+lynx -dump  -listonly  $URL| awk '{print " "$0}' 
+lynx -dump -listonly "http://professorglobal.cbpf.br/mediawiki/index.php/Webinars#C.C3.A1lculo_Vetorial" | awk '/maplesoft/ {print $2}'
+lynx -dump -listonly "http://professorglobal.cbpf.br/mediawiki/index.php/Webinars#C.C3.A1lculo_Vetorial" | awk '/maplesoft/ {print $2}' | gerp Resolu
+lynx -dump -listonly "http://professorglobal.cbpf.br/mediawiki/index.php/Webinars#C.C3.A1lculo_Vetorial" | awk '/maplesoft/ {print $2}' | grep Resolu
+lynx -dump -listonly "http://professorglobal.cbpf.br/mediawiki/index.php/Webinars#C.C3.A1lculo_Vetorial" | awk '/maplesoft/ {print $2}' | grep demo
+lynx -dump -listonly "http://professorglobal.cbpf.br/mediawiki/index.php/Webinars#C.C3.A1lculo_Vetorial" | awk '/maplesoft/ {print "curl -v "$2"ff"}' | grep demo
+lynx -dump -listonly "http://professorglobal.cbpf.br/mediawiki/index.php/Webinars#C.C3.A1lculo_Vetorial" | awk '/maplesoft/ {print "curl -v "$2" 2&1"}' | grep demo
+lynx -dump -listonly "http://professorglobal.cbpf.br/mediawiki/index.php/Webinars#C.C3.A1lculo_Vetorial" | awk '/maplesoft/ {print "curl -v "$2" 2>&1"}' | grep demo
+lynx -dump -listonly "http://professorglobal.cbpf.br/mediawiki/index.php/Webinars#C.C3.A1lculo_Vetorial" | awk '/maplesoft/ {print "curl -v "$2" 2>&1 >>f"}' | grep demo
+lynx -dump -listonly "http://professorglobal.cbpf.br/mediawiki/index.php/Webinars#C.C3.A1lculo_Vetorial" | awk '/maplesoft/ {print "curl -v "$2" 2>&1 >>f"}' | grep demo > a
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print "wget" $2}'
+curl -A "Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X;en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10" -s $URL | awk -F \" '$0 ~ /<source src/{print "wget" $2}'
+ls -rtl *.png |  awk '{print $9}
+ls -rtl *.png |  awk '{print $9}'
+ls -rtl *.png |  awk '{print $9}'| xargs rename -N 0001 's/.*/$N.png/'
+ls -rtl *.png |  awk '{print $9}'| xargs rename -n 's/.*/our $i; sprintf("%04d.jpg", $i++)/e'
