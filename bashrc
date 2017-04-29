@@ -69,18 +69,17 @@ shopt -s checkwinsize
 
 # set -o vi
 # bind -m vi-insert "\C-l":clear-screen
-
-## http://vim.wikia.com/wiki/256_colors_in_vim
-# if [ -e /usr/share/terminfo/x/xterm+256color ]; then
-#   export TERM='xterm-256color'
-# else
-#   export TERM='xterm-color'
-# fi
-# # If not running interactively, do not do anything
+# http://vim.wikia.com/wiki/256_colors_in_vim
+ if [ -e /usr/share/terminfo/x/xterm+256color ]; then
+   #export TERM='xterm-256color'
+   export TERM='screen-256color'
+ else
+   export TERM='xterm-color'
+ fi
+# If not running interactively, do not do anything
 [[ $- != *i* ]] && return
 [[ -z "$TMUX" ]] && exec tmux
 # tmux kill-session -a
-ulimit -n 2048
 
 # load confs
 source ${HOME}/developer/bash-config/it.sh
