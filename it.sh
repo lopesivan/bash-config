@@ -35,7 +35,7 @@ export BASH_IT_GREP="/bin/grep"
 # Path to the bash it configuration
 #export BASH_IT="/home/ivan/developer/bash-config/bash-it"
 #export BASH_IT="$(brew --prefix)/opt/bash-it"
-export BASH_IT="${HOMEBREW_PREFIX}/opt/bash-it"
+export BASH_IT="${HOME}/.linuxbrew/opt/bash-it"
 
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
