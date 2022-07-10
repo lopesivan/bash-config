@@ -1,0 +1,56 @@
+#         +-----------------------+
+#         |                       |
+#         v                       ^
+#       [bin]  <->  [dec]  <->  [hex]
+#         v                       ^
+#         |                       |
+#         +-----------------------+
+
+bin2dec()
+{
+    [ $# -eq 0 ] && return 1
+
+    echo $((2#$1))
+}
+
+dec2bin()
+{
+    [ $# -eq 0 ] && return 1
+    printf "%0.8d" $(echo "obase=2;$1" | bc )
+}
+
+dec2hex()
+{
+    [ $# -eq 0 ] && return 1
+
+    printf "%x\n" "$1"
+}
+
+hex2dec()
+{
+    [ $# -eq 0 ] && return 1
+
+    echo $((0x${1#0x}))
+}
+
+hex2bin()
+{
+    [ $# -eq 0 ] && return 1
+
+        local bin
+        local i
+
+        for i in $*; do
+                bin=$(echo "obase=2;ibase=16;$(echo $i | tr a-f A-F)" | bc)
+                echo -n "$bin "
+    done
+        echo
+}
+
+bin2hex()
+{
+    dec=$(bin2dec $1)
+    dec2hex $dec
+}
+
+#vim:set noet ft=sh sts=4 sw=4 ts=4:

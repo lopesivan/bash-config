@@ -1,0 +1,17 @@
+# ██████╗ ███████╗██████╗
+# ██╔══██╗██╔════╝██╔══██╗
+# ██║  ██║█████╗  ██████╔╝
+# ██║  ██║██╔══╝  ██╔══██╗
+# ██████╔╝███████╗██████╔╝
+# ╚═════╝ ╚══════╝╚═════╝
+#
+
+DEBEMAIL="$(git config --get user.email|sed -e 's/\s(at)\s/@/' -e 's/\s(dot)\s/./g')"
+DEBFULLNAME="$(git config --get user.name)"
+export DEBEMAIL DEBFULLNAME
+
+#greetings-0.1 directory, run the following:
+
+#$ dh_make --indep --createorig
+
+#vim:set noet ft=sh sts=4 sw=4 ts=4:

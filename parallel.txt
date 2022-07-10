@@ -1,0 +1,22 @@
+parallel -j4 wget "{}" 
+parallel -j2 wget "{}" 
+sudo apt-get install parallel
+parallel
+cat links | parallel -j2 wget {}
+cat links | parallel -j2 echo wget "{}"
+cat links | parallel -j2 echo wget "{}"
+cat links | parallel -j2 wget "{}"
+cat links | parallel -j2 wget "{}"
+cat links | parallel -j2 echo tar xvzf "{}"
+ls -1 *.tgz  | parallel -j2 echo tar xvzf "{}"
+ls -1 *.tgz  | parallel -j2 tar xvzf "{}"
+tdl add "lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print \"wget \"$2}'|  parallel -j2 echo wget \"{}\" 
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print "wget "$2}'|  parallel -j2 wget "{}"
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print "wget "$2}'|  parallel -j2 echo wget "{}"
+lynx -dump  -listonly  https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/NRiC/| awk '/.*\.c$/ {print "wget "$2}'|  parallel -j2 echo wget "{}" > a
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print "wget "$2}' | sort | uniq |  parallel -j2 echo wget "{}"
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print "wget "$2}' | sort | uniq |  parallel -j2  wget "{}"
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print "wget "$2}' | sort | uniq |  parallel -j2  wget -A.ipynb "{}"
+lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print ""$2}' | sort | uniq |  parallel -j2  wget -A.ipynb "{}"
+echo lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print \"\"$2}' | sort | uniq |  parallel -j2  wget -A.ipynb \"{}\" > DOWNLOAD
+echo "lynx -dump  -listonly  http://www.im.ufrj.br/bernardofpc/cursos/CientificaI.php| awk '/.*\.ipynb$/ {print \"\"$2}' | sort | uniq |  parallel -j2  wget -A.ipynb \"{}\" "> DOWNLOAD
