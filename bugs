@@ -1,0 +1,8 @@
+Código de Erro | Descrição
+100            | O arquivo it.sh apresentava um apontamento errado, a variável BASH_IT foi substituída.
+               |
+               |  export BASH_IT=/home/linuxbrew/.linuxbrew/opt/bash-it
+---------------+----------------------------------------------------------
+
+
+
