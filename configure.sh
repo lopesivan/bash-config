@@ -40,7 +40,7 @@ for f in ${files[*]}; do
   test -L ~/.${f} &&
     rm ${HOME}/.${f}
 
-  ln -s ${HOME}/developer/bash-config/${f} ${HOME}/.${f}
+  ln -s $(brew --prefix)/Cellar/bash-config/1.2/${f} ${HOME}/.${f}
 done
 
 # ----------------------------------------------------------------------------
