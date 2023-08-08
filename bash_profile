@@ -5,3 +5,5 @@ if [ -e /home/ivan/.nix-profile/etc/profile.d/nix.sh ]; then . /home/ivan/.nix-p
 
 # opam configuration
 test -r /home/ivan/.opam/opam-init/init.sh && . /home/ivan/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
