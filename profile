@@ -8,7 +8,6 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -17,4 +16,8 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-eval "$(/home/ivan/developer/env/rakudobrew/bin/rakudobrew init Bash)"
+# set PATH so it includes user's private bin directories
+#PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
