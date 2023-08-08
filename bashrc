@@ -168,7 +168,7 @@ eval "$(gh completion -s bash)"
 #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #nix
-. /home/ivan/.nix-profile/etc/profile.d/nix.sh
+# . /home/ivan/.nix-profile/etc/profile.d/nix.sh
 # Add Jbang to environment
 # alias j!=jbang
 # export PATH="$HOME/.jbang/bin:$PATH"
